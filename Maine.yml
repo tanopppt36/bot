@@ -1,0 +1,29 @@
+import requests
+
+# github API endpoint
+endpoint = 'https://api.github.com/users'
+
+# API access token
+token = '' # add here your github API access token
+
+# API headers
+headers = {
+    'Authorization': 'token ' + token
+}
+
+# loop to create 100 accounts
+for i in range(100):
+    # username for each account
+    username = 'codespace-bot-' + str(i)
+    
+    # API data
+    data = {
+        'login': username,
+        'type': 'bot'
+    }
+    
+    # API request
+    r = requests.post(endpoint, headers=headers, data=data)
+    
+    # status code
+    print(r.status_code)
