@@ -4,7 +4,7 @@ import requests
 endpoint = 'https://api.github.com/users'
 
 # API access token
-token = '' # add here your github API access token
+token = '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' # add here your github API access token
 
 # API headers
 headers = {
